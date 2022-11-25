@@ -1,0 +1,204 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="소스 파일">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="헤더 파일">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="리소스 파일">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="소스 파일\SDLComponents">
+      <UniqueIdentifier>{c9f173b2-92e0-42de-90e8-1d13339462b5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\SDLComponents">
+      <UniqueIdentifier>{3d2680dd-a816-4148-80dd-95e4126de3a3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\GameComponents">
+      <UniqueIdentifier>{b2c5c698-09a3-44fb-8ae6-aed5cd784656}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\GameComponents">
+      <UniqueIdentifier>{fea51e95-63c2-4e31-bd4a-cca886733f1c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\GameClasses">
+      <UniqueIdentifier>{ee3a7887-7330-4f11-8ca7-60744644a4f8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\GameClasses">
+      <UniqueIdentifier>{1cee6122-9a62-4bd1-92bc-3cb9368bc6fa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\UIComponent">
+      <UniqueIdentifier>{ae6d0740-6217-4b66-b032-d26af3994a5e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\SDLComponents\ZakumCompo">
+      <UniqueIdentifier>{b5eb1d40-b47f-4bab-a2d9-e092ed647b7e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\SDLComponents\PlayerCompo">
+      <UniqueIdentifier>{55fb8468-7bf1-45d9-8aed-a85c657c2de6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\SDLComponents\ZakumCompo">
+      <UniqueIdentifier>{88c4f9a7-5c0a-4fbb-8fbd-0db9fceed967}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\SDLComponents\PlayerCompo">
+      <UniqueIdentifier>{eb91fbc9-bd74-454f-990b-9e3da785cd38}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="SDLFramework.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="SDLGameObject.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Utilities.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Main.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Texture.cpp">
+      <Filter>소스 파일\SDLComponents</Filter>
+    </ClCompile>
+    <ClCompile Include="Transform.cpp">
+      <Filter>소스 파일\SDLComponents</Filter>
+    </ClCompile>
+    <ClCompile Include="GameManager.cpp">
+      <Filter>소스 파일\GameClasses</Filter>
+    </ClCompile>
+    <ClCompile Include="Text.cpp">
+      <Filter>소스 파일\SDLComponents</Filter>
+    </ClCompile>
+    <ClCompile Include="MouseTest.cpp">
+      <Filter>소스 파일\GameComponents</Filter>
+    </ClCompile>
+    <ClCompile Include="KeyboardTest.cpp">
+      <Filter>소스 파일\GameComponents</Filter>
+    </ClCompile>
+    <ClCompile Include="Collider.cpp">
+      <Filter>소스 파일\SDLComponents</Filter>
+    </ClCompile>
+    <ClCompile Include="CircleCollider.cpp">
+      <Filter>소스 파일\SDLComponents</Filter>
+    </ClCompile>
+    <ClCompile Include="RectangleCollider.cpp">
+      <Filter>소스 파일\SDLComponents</Filter>
+    </ClCompile>
+    <ClCompile Include="State.cpp">
+      <Filter>소스 파일\SDLComponents</Filter>
+    </ClCompile>
+    <ClCompile Include="UI.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="UIState.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Arm.cpp">
+      <Filter>소스 파일\SDLComponents\ZakumCompo</Filter>
+    </ClCompile>
+    <ClCompile Include="Body.cpp">
+      <Filter>소스 파일\SDLComponents\ZakumCompo</Filter>
+    </ClCompile>
+    <ClCompile Include="FirePillar.cpp">
+      <Filter>소스 파일\SDLComponents\ZakumCompo</Filter>
+    </ClCompile>
+    <ClCompile Include="Thunder.cpp">
+      <Filter>소스 파일\SDLComponents\ZakumCompo</Filter>
+    </ClCompile>
+    <ClCompile Include="Zakum.cpp">
+      <Filter>소스 파일\SDLComponents\ZakumCompo</Filter>
+    </ClCompile>
+    <ClCompile Include="Player.cpp">
+      <Filter>소스 파일\SDLComponents\PlayerCompo</Filter>
+    </ClCompile>
+    <ClCompile Include="RightDart.cpp">
+      <Filter>소스 파일\SDLComponents\PlayerCompo</Filter>
+    </ClCompile>
+    <ClCompile Include="LeftDart.cpp">
+      <Filter>소스 파일\SDLComponents\PlayerCompo</Filter>
+    </ClCompile>
+    <ClCompile Include="Creep.cpp">
+      <Filter>소스 파일\SDLComponents\ZakumCompo</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="SDLFramework.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="SDLGameObject.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Utilities.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Texture.h">
+      <Filter>헤더 파일\SDLComponents</Filter>
+    </ClInclude>
+    <ClInclude Include="Transform.h">
+      <Filter>헤더 파일\SDLComponents</Filter>
+    </ClInclude>
+    <ClInclude Include="GameManager.h">
+      <Filter>헤더 파일\GameClasses</Filter>
+    </ClInclude>
+    <ClInclude Include="Text.h">
+      <Filter>헤더 파일\SDLComponents</Filter>
+    </ClInclude>
+    <ClInclude Include="MouseTest.h">
+      <Filter>헤더 파일\GameComponents</Filter>
+    </ClInclude>
+    <ClInclude Include="Component.h">
+      <Filter>헤더 파일\SDLComponents</Filter>
+    </ClInclude>
+    <ClInclude Include="KeyboardTest.h">
+      <Filter>헤더 파일\GameComponents</Filter>
+    </ClInclude>
+    <ClInclude Include="Collider.h">
+      <Filter>헤더 파일\SDLComponents</Filter>
+    </ClInclude>
+    <ClInclude Include="CircleCollider.h">
+      <Filter>헤더 파일\SDLComponents</Filter>
+    </ClInclude>
+    <ClInclude Include="RectangleCollider.h">
+      <Filter>헤더 파일\SDLComponents</Filter>
+    </ClInclude>
+    <ClInclude Include="State.h">
+      <Filter>헤더 파일\SDLComponents</Filter>
+    </ClInclude>
+    <ClInclude Include="UI.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="UIState.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Body.h">
+      <Filter>헤더 파일\SDLComponents\ZakumCompo</Filter>
+    </ClInclude>
+    <ClInclude Include="Arm.h">
+      <Filter>헤더 파일\SDLComponents\ZakumCompo</Filter>
+    </ClInclude>
+    <ClInclude Include="FirePillar.h">
+      <Filter>헤더 파일\SDLComponents\ZakumCompo</Filter>
+    </ClInclude>
+    <ClInclude Include="LeftDart.h">
+      <Filter>헤더 파일\SDLComponents\PlayerCompo</Filter>
+    </ClInclude>
+    <ClInclude Include="Player.h">
+      <Filter>헤더 파일\SDLComponents\PlayerCompo</Filter>
+    </ClInclude>
+    <ClInclude Include="RightDart.h">
+      <Filter>헤더 파일\SDLComponents\PlayerCompo</Filter>
+    </ClInclude>
+    <ClInclude Include="Zakum.h">
+      <Filter>헤더 파일\SDLComponents\ZakumCompo</Filter>
+    </ClInclude>
+    <ClInclude Include="Thunder.h">
+      <Filter>헤더 파일\SDLComponents\ZakumCompo</Filter>
+    </ClInclude>
+    <ClInclude Include="Creep.h">
+      <Filter>헤더 파일\SDLComponents\ZakumCompo</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
