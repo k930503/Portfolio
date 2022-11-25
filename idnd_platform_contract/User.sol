@@ -21,6 +21,17 @@ contract User is Storage {
         creators[_customer] = Type.CreatorInfo(0, 0, Type.CreatorTier.E);
     }
     
+    function setCreators(address[] calldata _customers) external {
+        require(msg.sender == owner, "Not owner");
+
+        for (uint8 i = 0; i < _customers.length; i++) {
+            require(customers[_customers[i]].status != Type.CustomerStatus.NONMEMBER, "You must regist customer first");
+            require(creators[_customers[i]].tier == Type.CreatorTier.NONE, "Creator already exist");
+            
+            creators[_customers[i]] = Type.CreatorInfo(0, 0, Type.CreatorTier.E);
+        }
+    }
+
     function removeCreator(address _creator) external {
         
         require(msg.sender == owner, "Not owner");

@@ -87,32 +87,7 @@ contract Trade is Storage {
         }
         else {
 
-            uint256 fee;
-            
-            if (creator.tier == Type.CreatorTier.E) {
-            
-                fee = product.price.div(tierEFeeDiv);
-            }
-            else if (creator.tier == Type.CreatorTier.D) {
-                
-                fee = product.price.div(tierDFeeDiv);
-            }
-            else if (creator.tier == Type.CreatorTier.C) {
-                
-                fee = product.price.div(tierCFeeDiv);
-            }
-            else if (creator.tier == Type.CreatorTier.B) {
-                
-                fee = product.price.div(tierBFeeDiv);
-            }
-            else if (creator.tier == Type.CreatorTier.A) {
-                
-                fee = product.price.div(tierAFeeDiv);
-            }
-            else if (creator.tier == Type.CreatorTier.BRAND) {
-                
-                fee = product.price.div(brandFeeDiv);
-            }
+            uint256 fee = product.price.div(tierFeeDiv[uint8(creator.tier) - 1]);
             
             totalFee = totalFee.add(fee);
             ownerLockBalance.push(Type.LockInfo(now + lockAfterTime, fee, _buyer, _productUuid));

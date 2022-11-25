@@ -30,16 +30,10 @@ contract Delegator is Storage {
         require(success);
     }
     
-    function setTradeFee(uint16 _tierEFeeDiv,
-                         uint16 _tierDFeeDiv,
-                         uint16 _tierCFeeDiv,
-                         uint16 _tierBFeeDiv,
-                         uint16 _tierAFeeDiv,
-                         uint16 _brandFeeDiv) external {
+    function setTradeFee(uint16[6] calldata _tierFeeDiv) external {
         
         address logic = mapper.getLogicContract("Manage");
-        (bool success, bytes memory returnedData) = logic.delegatecall(abi.encodeWithSignature("setTradeFee(uint16,uint16,uint16,uint16,uint16,uint16)",
-                                                                       _tierEFeeDiv, _tierDFeeDiv, _tierCFeeDiv, _tierBFeeDiv, _tierAFeeDiv, _brandFeeDiv));
+        (bool success, bytes memory returnedData) = logic.delegatecall(abi.encodeWithSignature("setTradeFee(uint16[6])", _tierFeeDiv));
  
         require(success);
     }
@@ -88,6 +82,14 @@ contract Delegator is Storage {
         require(success);
     }
     
+    function setCreators(address[] calldata _customers) external {
+        
+        address logic = mapper.getLogicContract("User");
+        (bool success, bytes memory returnedData) = logic.delegatecall(abi.encodeWithSignature("setCreators(address[])", _customers));
+ 
+        require(success);
+    }
+
     function removeCreator(address _creator) external {
         
         address logic = mapper.getLogicContract("User");
@@ -213,6 +215,17 @@ contract Delegator is Storage {
         
         address logic = mapper.getLogicContract("Review");
         (bool success, bytes memory returnedData) = logic.delegatecall(abi.encodeWithSignature("removeReview(string)", _productUuid));
+ 
+        require(success);
+    }
+
+    function editReview(string calldata _productUuid,
+                        uint8 _rating) external {
+        
+        address logic = mapper.getLogicContract("Review");
+        (bool success, bytes memory returnedData) = logic.delegatecall(abi.encodeWithSignature(
+                                                                        "editReview(string,uint8)",
+                                                                        _productUuid, _rating));
  
         require(success);
     }

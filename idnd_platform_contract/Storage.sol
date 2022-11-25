@@ -20,12 +20,7 @@ contract Storage {
     uint256 public totalFee;
     uint32  public lockAfterTime;
     
-    uint16 public tierEFeeDiv;
-    uint16 public tierDFeeDiv;
-    uint16 public tierCFeeDiv;
-    uint16 public tierBFeeDiv;
-    uint16 public tierAFeeDiv;
-    uint16 public brandFeeDiv;
+    uint16[6] public tierFeeDiv;
     
     address public owner;
     IERC20 mm;

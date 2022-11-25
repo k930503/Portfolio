@@ -38,21 +38,13 @@ contract Manage is Storage {
         lockAfterTime = _lockAfterTime;
     }
     
-    function setTradeFee(uint16 _tierEFeeDiv,
-                         uint16 _tierDFeeDiv,
-                         uint16 _tierCFeeDiv,
-                         uint16 _tierBFeeDiv,
-                         uint16 _tierAFeeDiv,
-                         uint16 _brandFeeDiv) external {
+    function setTradeFee(uint16[6] calldata _tierFeeDiv) external {
         
         require(msg.sender == owner, "Not owner");
         
-        tierEFeeDiv = _tierEFeeDiv;
-        tierDFeeDiv = _tierDFeeDiv;
-        tierCFeeDiv = _tierCFeeDiv;
-        tierBFeeDiv = _tierBFeeDiv;
-        tierAFeeDiv = _tierAFeeDiv;
-        brandFeeDiv = _brandFeeDiv;
+        for (uint8 i = 0; i < tierFeeDiv.length; i++) {
+            tierFeeDiv[i] = _tierFeeDiv[i];
+        }
     }
     
     function setCreatorTier(address _creator, Type.CreatorTier _tier) external {

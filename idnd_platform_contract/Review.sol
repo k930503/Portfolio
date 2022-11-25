@@ -37,4 +37,19 @@ contract Review is Storage {
 
         delete reviews[msg.sender][_productUuid];
     }
+
+    function editReview(string calldata _productUuid, uint8 _rating) external {
+
+        Type.CustomerInfo storage c = customers[msg.sender];
+        require(c.status != Type.CustomerStatus.NONMEMBER, "You must regist customer first");
+        require(_rating <= 10, "Rating must under 10");
+        require(purchaseTable[msg.sender][_productUuid].status == Type.PurchaseStatus.ACCEPT, "This product has not been purchased");
+
+        Type.ReviewInfo storage r = reviews[msg.sender][_productUuid];
+        require(r.status == Type.ReviewStatus.ON, "Review is not available");
+
+        p.totalReviewRating -= rating;
+        p.totalReviewRating += _rating;
+        revies[msg.sender][_productUuid] = Type.ReviewInfo(_rating, Type.ReviewStatus.ON);
+    }
 }

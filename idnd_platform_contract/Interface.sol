@@ -10,12 +10,7 @@ contract Interface {
 
     function setLockAfterTime(uint32 _lockAfterTime) external;
     
-    function setTradeFee(uint16 _tierEFeeDiv,
-                         uint16 _tierDFeeDiv,
-                         uint16 _tierCFeeDiv,
-                         uint16 _tierBFeeDiv,
-                         uint16 _tierAFeeDiv,
-                         uint16 _brandFeeDiv) external;
+    function setTradeFee(uint16[6] calldata _tierFeeDiv) external;
                          
     function setCreatorTier(address _creator, Type.CreatorTier _tier) external;
     
@@ -28,6 +23,8 @@ contract Interface {
 
     function setCreator(address _customer) external;
     
+    function setCreaters(address[] calldata _customers) external;
+
     function removeCreator(address _creator) external;
 
     function removeCustomer(address _customer) external;
@@ -66,6 +63,8 @@ contract Interface {
                         uint8  _rating) external;
 
     function removeReview(string calldata _productUuid) external;
+
+    function editReview(string calldata _productUuid, uint8 _rating) external;
 
     //MakersMarket
     function setMapper(address _mapper) external;

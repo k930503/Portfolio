@@ -7,20 +7,17 @@ contract MakersMarket is Storage {
     
     using SafeMath for uint256;
     
-    constructor(address _mapper, IERC20 _mm) public {
+    constructor(address _mapper, IERC20 _mm, uint8[6] memory _tierFeeDiv) public {
         
         owner  = msg.sender;
         mapper = AddressMapper(_mapper);
         mm     = _mm;
         
-        tierEFeeDiv = 20;   //5%
-        tierDFeeDiv = 25;   //4%
-        tierCFeeDiv = 33;   //3.0...%
-        tierBFeeDiv = 50;   //2%
-        tierAFeeDiv = 100;  //1%
-        brandFeeDiv = 100;
+        for (uint8 i = 0; i < tierFeeDiv.length; i++) {
+            tierFeeDiv[i] = _tierFeeDiv[i];
+        }
 
-        lockAfterTime = 300; // 5 minute
+        lockAfterTime = 604800; // 7 days
     }
  
     modifier onlyOwner() {
